@@ -76,8 +76,8 @@ body {
 .recipe-card {
   background-color: white;
   padding: 10px 10px;
-  min-width: 300px;
-  max-width: 400px;
+  min-width: 350px;
+  max-width: 369px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.403);
   transition: transform 0.2s ease;
@@ -99,9 +99,12 @@ body {
   font-size: 24px;
   color: #ff9560;
 }
+
 .recipe-card p,
 .recipe-card small {
   color: #555;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 .login-btn {
   background-color: #ff9560;

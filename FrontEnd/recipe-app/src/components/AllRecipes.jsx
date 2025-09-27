@@ -29,7 +29,15 @@ export default function AllRecipes() {
                 alt="Recipe Image"
               />
               <h4 style={{ textAlign: "center" }}>{item?.title}</h4>
-              <p style={{ fontWeight: "bold" }}>{item?.ingredients} </p>
+              <p
+                style={{
+                  marginTop: "10px",
+                  fontWeight: "bold",
+                  wordBreak: "break-word",
+                }}
+              >
+                {item.ingredients[0].split(",").join(",\u200B ")}
+              </p>
               <small>{item?.instructions}</small>
               <div className="icons"></div>
             </div>

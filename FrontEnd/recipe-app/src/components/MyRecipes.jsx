@@ -106,7 +106,15 @@ function MyRecipes() {
                 alt="Recipe Image"
               />
               <h4 style={{ textAlign: "center" }}>{item?.title}</h4>
-              <p style={{ fontWeight: "bold" }}>{item?.ingredients} </p>
+              <p
+                style={{
+                  marginTop: "10px",
+                  fontWeight: "bold",
+                  wordBreak: "break-word",
+                }}
+              >
+                {item.ingredients[0].split(",").join(",\u200B ")}
+              </p>
               <p style={{ marginBottom: "12px" }}>{item?.instructions}</p>
 
               {/* <FaHeart className="icons" /> */}
