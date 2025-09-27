@@ -1,0 +1,194 @@
+body {
+  background-color: #dddbdb !important;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.Home {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.Left {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #ff9560;
+}
+.Left p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 22px;
+}
+.Left button {
+  margin-top: 10px;
+  font-size: 18px;
+  background-color: #ff9560;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+  outline: none;
+}
+.Left button:hover {
+  background-color: #e25205;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: transparent;
+  height: 120px;
+}
+.navbar img {
+  width: 150px;
+  height: 150px;
+  margin: -12px 0px;
+}
+.nav-item {
+  display: flex;
+  font-size: 25px;
+  margin-left: 50px;
+}
+.nav-item a {
+  text-decoration: none;
+  color: #ff9560;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.nav-item a:hover {
+  color: #e25205;
+}
+.recipes-container {
+  padding: 2rem;
+  background-color: #fff3e6;
+  min-height: 100vh;
+}
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.recipe-card {
+  background-color: white;
+  padding: 10px 10px;
+  min-width: 300px;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.403);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+.recipe-card .icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ff9560;
+  font-size: 20px;
+}
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+.recipe-card h4 {
+  margin: 0;
+  font-size: 24px;
+  color: #ff9560;
+}
+.recipe-card p,
+.recipe-card small {
+  color: #555;
+}
+.login-btn {
+  background-color: #ff9560;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.login-btn:hover {
+  background-color: #e25205;
+}
+.addrecipe-btn {
+  cursor: pointer;
+
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+.addrecipe-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.Edit-icon {
+  color: blue;
+  transition: all 0.3s;
+}
+.Edit-icon:hover {
+  transform: scale(1.3);
+}
+.Delete-icon {
+  color: red;
+  transition: all 0.3s;
+}
+.Delete-icon:hover {
+  transform: scale(1.3);
+}
+.container-fluid {
+}
+/* .navbar-collapse {
+  background-color: #fff3e6;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 9999;
+} */
+
+/* small windo*/
+@media (max-width: 1199px) {
+  .Modal-Content {
+    width: 45vh;
+  }
+  .Body-content {
+    width: auto !important;
+  }
+  .Home {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .Left p {
+    width: 100%;
+  }
+  .navbar-collapse {
+    position: fixed;
+    right: 0;
+    top: 137px;
+    left: 0;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .navbar-nav .nav-link {
+    color: #333 !important;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .login-btn,
+  .btn {
+    width: 100%;
+  }
+}
