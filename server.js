@@ -15,9 +15,11 @@ app.use("/recipe", require("./routes/Recipe"));
 app.use("/user", require("./routes/User"));
 app.use("/public", express.static("public"));
 // Serve React build
+
 app.use(express.static(path.join(__dirname, "client/build")));
 
-app.get("*", (req, res) => {
+// Fallback for React Router
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
 app.listen(port, () => {
