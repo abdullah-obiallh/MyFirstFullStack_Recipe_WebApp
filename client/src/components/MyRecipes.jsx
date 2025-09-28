@@ -37,7 +37,7 @@ function MyRecipes() {
       return;
     }
     axios
-      .delete(`http://localhost:5000/recipe/${RecipeForDelete._id}`)
+      .delete(`/recipe/${RecipeForDelete._id}`)
       .then(() => {
         handelchangeMessage("Deleted Success");
         SetMyRecipes((prev) =>
@@ -59,7 +59,7 @@ function MyRecipes() {
       if (!user) {
         return;
       }
-      const { data } = await axios.get("http://localhost:5000/Recipe");
+      const { data } = await axios.get("/Recipe");
       const myRecipes = data.filter((recipe) => {
         return recipe.CreatedBy === user._id;
       });
@@ -102,7 +102,7 @@ function MyRecipes() {
             <div className="recipe-card" key={item._id}>
               <img
                 style={{ width: "100%" }}
-                src={`http://localhost:5000/public/images/${item.CoverImage}`}
+                src={`/public/images/${item.CoverImage}`}
                 alt="Recipe Image"
               />
               <h4 style={{ textAlign: "center" }}>{item?.title}</h4>

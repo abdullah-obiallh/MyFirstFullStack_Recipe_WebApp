@@ -37,7 +37,7 @@ export default function AddRecipe() {
       formData.append("CoverImage", recipe.CoverImage);
 
       console.log("Sending.... ,", recipe);
-      await axios.post(`http://localhost:5000/recipe`, formData, {
+      await axios.post(`/recipe`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${localStorage.getItem("token")}`,

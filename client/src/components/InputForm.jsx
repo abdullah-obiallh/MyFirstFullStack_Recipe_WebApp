@@ -19,10 +19,7 @@ function InputForm({ handleClose }) {
     let endpoint = isSignIn ? "login" : "register";
 
     try {
-      const res = await axios.post(
-        `http://localhost:5000/user/${endpoint}`,
-        formData
-      );
+      const res = await axios.post(`/user/${endpoint}`, formData);
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));

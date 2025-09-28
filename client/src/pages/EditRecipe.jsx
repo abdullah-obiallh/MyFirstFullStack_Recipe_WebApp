@@ -43,7 +43,7 @@ export default function EditRecipe() {
       formData.append("CoverImage", recipe.CoverImage);
 
       console.log("Edditing.... ,", recipe);
-      await axios.put(`http://localhost:5000/recipe/${recipe._id}`, formData, {
+      await axios.put(`/recipe/${recipe._id}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -57,7 +57,7 @@ export default function EditRecipe() {
   }
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/recipe/${id}`).then((response) => {
+    axios.get(`/recipe/${id}`).then((response) => {
       let data = response.data;
       setrecipe({
         _id: data._id,

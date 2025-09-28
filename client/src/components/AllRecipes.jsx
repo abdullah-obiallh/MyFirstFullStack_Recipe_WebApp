@@ -7,7 +7,7 @@ export default function AllRecipes() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/Recipe")
+      .get("/Recipe")
       .then((response) => {
         setRecipes(response.data);
       })
@@ -25,7 +25,7 @@ export default function AllRecipes() {
             <div className="recipe-card" key={item._id}>
               <img
                 style={{ width: "100%", maxHeight: "300px" }}
-                src={`http://localhost:5000/public/images/${item.CoverImage}`}
+                src={`/public/images/${item.CoverImage}`}
                 alt="Recipe Image"
               />
               <h4 style={{ textAlign: "center" }}>{item?.title}</h4>
