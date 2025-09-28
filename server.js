@@ -16,7 +16,7 @@ app.use("/user", require("./routes/User"));
 app.use("/public", express.static("public"));
 // Serve React build
 
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "client/dist")));
 
 // Fallback for React Router
 app.use((req, res) => {
