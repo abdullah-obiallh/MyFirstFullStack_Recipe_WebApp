@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, "client/build")));
 
 // Fallback for React Router
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "client/dist", "index.html"));
 });
 app.listen(port, () => {
   console.log("server is running On Port :", port);
